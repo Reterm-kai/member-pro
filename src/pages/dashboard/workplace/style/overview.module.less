@@ -1,0 +1,120 @@
+.container {
+  padding: 20px;
+
+  :global(.arco-divider-horizontal) {
+    border-bottom: 1px solid var(--color-border-1);
+  }
+
+  :global(.arco-divider-vertical) {
+    border-left: 1px solid var(--color-border-1);
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: var(--color-text-1);
+  gap: 12px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background-color: var(--color-fill-2);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 12px;
+  color: var(--color-text-1);
+  white-space: nowrap;
+}
+
+.count {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-1);
+
+  .unit {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-text-2);
+    margin-left: 8px;
+  }
+}
+
+.divider {
+  height: 60px;
+}
+
+.ctw {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.chart-sub-title {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 4px;
+  color: var(--color-text-3);
+}
+
+// 响应式设计
+@media (max-width: 1200px) {
+  .item {
+    padding-left: 16px;
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .count {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .item {
+    padding-left: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .count {
+    font-size: 18px;
+  }
+
+  .ctw {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .divider {
+    height: auto;
+  }
+}

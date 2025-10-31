@@ -1,0 +1,54 @@
+.container {
+  overflow: hidden;
+
+  :global(.arco-card-body) {
+    padding: 20px 20px 10px;
+  }
+
+  :global(.arco-card) {
+    margin-bottom: 16px;
+  }
+}
+
+.actions {
+  padding: 12px 40px;
+  background-color: var(--color-bg-2);
+  display: flex;
+  gap: 16px;
+  flex-direction: row-reverse;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -3px 12px rgb(0 0 0 / 10%);
+  z-index: 100;
+}
+
+// 响应式设计
+@media (max-width: 1200px) {
+  .actions {
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    :global(.arco-card-body) {
+      padding: 16px 16px 8px;
+    }
+
+    :global(.arco-card) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .actions {
+    padding: 12px 16px;
+    flex-direction: column-reverse;
+    gap: 8px;
+
+    button {
+      width: 100%;
+    }
+  }
+}

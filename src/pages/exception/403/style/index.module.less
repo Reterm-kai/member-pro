@@ -1,0 +1,53 @@
+.wrapper {
+  position: relative;
+  background-color: var(--color-bg-1);
+  height: calc(100vh - 168px);
+  min-height: 400px;
+}
+
+.result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+// 响应式设计
+@media (max-width: 1200px) {
+  .wrapper {
+    min-height: 350px;
+  }
+
+  .result {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    height: calc(100vh - 120px);
+    min-height: 300px;
+  }
+
+  .result {
+    padding: 0 16px;
+    max-width: 100%;
+
+    // 调整结果页面内部元素样式
+    :global(.arco-result-title) {
+      font-size: 18px;
+    }
+
+    :global(.arco-result-subtitle) {
+      font-size: 13px;
+    }
+
+    :global(.arco-result-icon) {
+      font-size: 48px;
+    }
+  }
+}

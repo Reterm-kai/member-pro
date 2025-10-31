@@ -1,0 +1,63 @@
+.info-wrapper {
+  display: flex;
+  gap: 60px;
+}
+
+.info-avatar {
+  flex-shrink: 0;
+
+  :global(.arco-avatar-trigger-icon-button) {
+    color: rgb(var(--arcoblue-6));
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 2px solid var(--color-white);
+  }
+}
+
+.info-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.verified-tag {
+  height: 20px;
+  line-height: 20px;
+  margin-top: -2px;
+}
+
+.edit-btn {
+  margin-left: 12px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .info-wrapper {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .info-content {
+    width: 100%;
+
+    :global(.arco-descriptions-row) {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    :global(.arco-descriptions-item-label),
+    :global(.arco-descriptions-item-value) {
+      text-align: left;
+    }
+  }
+}

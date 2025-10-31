@@ -1,0 +1,47 @@
+.container {
+  :global(.arco-card) {
+    margin-top: 16px;
+  }
+}
+
+.steps {
+  max-width: 548px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 30px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+// 响应式设计
+@media (max-width: 1200px) {
+  .steps {
+    max-width: 90%;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    :global(.arco-card) {
+      margin-top: 12px;
+    }
+  }
+
+  .steps {
+    max-width: 100%;
+    padding: 0 12px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+
+    // 小屏幕下调整步骤条样式
+    :global(.arco-steps-item-title) {
+      font-size: 12px;
+    }
+
+    :global(.arco-steps-item-description) {
+      font-size: 11px;
+    }
+  }
+}

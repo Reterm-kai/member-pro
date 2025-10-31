@@ -1,0 +1,107 @@
+.card {
+  :global(.arco-spin) {
+    width: 100%;
+  }
+
+  :global(.arco-card-body) {
+    padding-top: 6px;
+  }
+
+  h6 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .content {
+    display: flex;
+    line-height: 32px;
+    gap: 8px;
+
+    &-icon {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    :global(.arco-statistic) {
+      line-height: normal;
+      min-width: 0;
+    }
+  }
+}
+
+.skeleton {
+  :global(.arco-skeleton-text-row) {
+    height: 32px;
+  }
+}
+
+// 响应式设计
+@media (max-width: 1200px) {
+  .card {
+    h6 {
+      font-size: 11px;
+    }
+
+    .content {
+      line-height: 28px;
+
+      &-icon {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 16px;
+      }
+
+      :global(.arco-statistic-value) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    :global(.arco-card-body) {
+      padding-top: 4px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    h6 {
+      font-size: 11px;
+      margin-bottom: 6px;
+    }
+
+    .content {
+      line-height: 28px;
+      gap: 6px;
+
+      &-icon {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+
+      :global(.arco-statistic-value) {
+        font-size: 16px;
+      }
+
+      :global(.arco-statistic-extra) {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .skeleton {
+    :global(.arco-skeleton-text-row) {
+      height: 28px;
+    }
+  }
+}

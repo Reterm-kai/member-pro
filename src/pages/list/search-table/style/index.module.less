@@ -1,0 +1,124 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.operations {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.content-type {
+  display: flex;
+  align-items: center;
+
+  > svg {
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+}
+
+.search-form-wrapper {
+  display: flex;
+  border-bottom: 1px solid var(--color-border-1);
+  margin-bottom: 20px;
+  gap: 20px;
+
+  .right-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    border-left: 1px solid var(--color-border-2);
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search-form {
+  flex: 1;
+  min-width: 0;
+  padding-right: 20px;
+
+  :global(.arco-form-label-item-left) {
+    > label {
+      white-space: nowrap;
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1200px) {
+  .toolbar {
+    gap: 12px;
+  }
+
+  .search-form {
+    padding-right: 16px;
+  }
+
+  .search-form-wrapper {
+    .right-button {
+      padding-left: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .operations {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .search-form-wrapper {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    .right-button {
+      border-left: none;
+      border-top: 1px solid var(--color-border-2);
+      padding-left: 0;
+      padding-top: 16px;
+      margin-bottom: 0;
+    }
+  }
+
+  .search-form {
+    padding-right: 0;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    button {
+      width: 100%;
+    }
+  }
+}
